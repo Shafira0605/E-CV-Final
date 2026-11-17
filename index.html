@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio of Devita Izhal Shafira, fifth-semester Information Systems student focused on Data Analytics and Web Development.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✧</text></svg>">
+  <meta property="og:title" content="Devita Izhal Shafira | Personal Portfolio">
+  <meta property="og:description" content="Information Systems student focused on Data Analytics and Web Development.">
+  <meta property="og:image" content="assets/final.jpeg">
+  <meta property="og:type" content="website">
+  <title>Devita Izhal Shafira | Personal Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FBF9F4', softBeige: '#F3ECE1', tan: '#E7DBD0',
+              paper: '#FAF6EE', espresso: '#342621', darkBrown: '#231815',
+              softBlue: '#BBD4E7', skyBlue: '#D5E6F3', powderBlue: '#E6F0F8',
+              rust: '#8F4631', taupe: '#9C8F84'
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            display: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            hand: ['Reenie Beanie', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .bg-grain {
+      background-color: #FBF9F4;
+      background-image: radial-gradient(#d3c9bf .65px, transparent .65px);
+      background-size: 24px 24px;
+    }
+    .bg-stripe-blue {
+      background: repeating-linear-gradient(90deg,#cde1f0 0,#cde1f0 26px,#fff 26px,#fff 52px);
+    }
+    @keyframes marquee { 0% { transform:translateX(0) } 100% { transform:translateX(-50%) } }
+    .animate-marquee { display:inline-flex; white-space:nowrap; animation:marquee 28s linear infinite }
+    .animate-marquee:hover { animation-play-state:paused }
+    .folder-tab { position:relative }
+    .folder-tab:before {
+      content:""; position:absolute; top:-12px; left:20px; width:110px; height:14px;
+      background:inherit; border-radius:8px 8px 0 0;
+    }
+    .project-card:hover .project-art { transform:scale(1.04) }
+    .project-art { transition:transform .5s ease }
+    .nav-link { transition:color .2s ease }
+    .nav-link:hover { color:#8F4631 }
+  </style>
+</head>
+
+<body class="bg-brand-cream text-brand-espresso font-sans antialiased selection:bg-brand-softBlue selection:text-brand-darkBrown">
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-50 w-full border-b border-brand-softBlue/50 bg-brand-skyBlue/50 backdrop-blur-md">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 lg:h-20 lg:px-12">
+      <a href="#home" class="flex flex-col leading-none tracking-tight" aria-label="Devita home">
+        <span class="font-serif text-2xl italic text-brand-darkBrown lg:text-3xl">Devita</span>
+        <span class="-mt-1 font-serif text-lg tracking-wide text-brand-darkBrown lg:text-xl">Izhal Shafira</span>
+      </a>
+
+      <nav class="hidden items-center gap-5 text-[10px] font-semibold uppercase tracking-[.15em] text-brand-darkBrown lg:flex">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#organization">Organization</a>
+        <a class="nav-link" href="#portfolio">Portfolio</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="rounded-full border border-brand-espresso/40 bg-white/70 px-4 py-2 text-[10px] font-semibold uppercase tracking-wider text-brand-darkBrown transition hover:bg-brand-espresso hover:text-white">
+        Let's Connect
+      </a>
+    </div>
+    <nav class="flex gap-5 overflow-x-auto px-5 pb-3 text-[10px] font-semibold uppercase tracking-wider text-brand-darkBrown lg:hidden">
+      <a class="shrink-0" href="#about">About</a>
+      <a class="shrink-0" href="#education">Education</a>
+      <a class="shrink-0" href="#skills">Skills</a>
+      <a class="shrink-0" href="#experience">Experience</a>
+      <a class="shrink-0" href="#organization">Organization</a>
+      <a class="shrink-0" href="#portfolio">Portfolio</a>
+      <a class="shrink-0" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="overflow-hidden bg-grain py-14 lg:py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-12 lg:gap-8 lg:px-12">
+        <div class="space-y-6 lg:col-span-6">
+          <p class="text-[10px] font-bold uppercase tracking-[.25em] text-brand-rust sm:text-xs">
+            ( INFORMATION SYSTEMS STUDENT · PERSONAL PORTFOLIO )
+          </p>
+          <h1 class="font-serif text-5xl font-normal leading-[1.05] text-brand-darkBrown sm:text-6xl lg:text-[4.2rem]">
+            Exploring data, building <em class="italic text-brand-rust">digital</em> experiences.
+          </h1>
+          <p class="max-w-xl text-sm font-light leading-7 text-brand-espresso/80 sm:text-base">
+            Hello, I'm <strong class="font-semibold">Devita Izhal Shafira</strong> — a fifth-semester Information Systems student focused on Data Analytics and Web Development, with an interest in database management and Data Engineering.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="#portfolio" class="rounded-full bg-brand-espresso px-7 py-3 text-[10px] font-semibold uppercase tracking-[.16em] text-brand-cream shadow-md transition hover:bg-black">Explore My Work</a>
+            <a href="#about" class="rounded-full border border-brand-darkBrown/50 px-7 py-3 text-[10px] font-semibold uppercase tracking-[.16em] text-brand-darkBrown transition hover:bg-brand-darkBrown hover:text-white">More About Me</a>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-3">
+            <span class="rounded-full bg-brand-powderBlue px-3 py-1.5 text-[10px] font-semibold tracking-wide">Data Analytics</span>
+            <span class="rounded-full bg-brand-powderBlue px-3 py-1.5 text-[10px] font-semibold tracking-wide">Python</span>
+            <span class="rounded-full bg-brand-powderBlue px-3 py-1.5 text-[10px] font-semibold tracking-wide">SQL</span>
+            <span class="rounded-full bg-brand-powderBlue px-3 py-1.5 text-[10px] font-semibold tracking-wide">Web Development</span>
+          </div>
+        </div>
+        <div class="relative mx-auto flex h-[420px] w-full max-w-[480px] items-center justify-center lg:col-span-6 lg:h-[510px]">
+          <div class="absolute left-1 top-5 z-20 w-36 -rotate-6 border border-brand-tan bg-[#efece4] p-3 shadow-xl sm:left-5">
+            <div class="flex h-20 items-center justify-center border border-brand-tan bg-brand-softBeige">
+              <span class="font-serif text-3xl italic text-brand-rust">DS</span>
+            </div>
+            <p class="mt-2 text-center font-serif text-xs italic text-brand-espresso">Personal dossier</p>
+          </div>
+          <div class="absolute right-3 top-8 h-[350px] w-[78%] overflow-hidden rounded-2xl border-4 border-white bg-gradient-to-br from-brand-softBlue via-brand-powderBlue to-brand-tan shadow-2xl sm:right-8 sm:h-[410px]">
+            <img src="assets/final.jpg" alt="Devita Izhal Shafira" class="absolute inset-0 z-10 h-full w-full object-cover object-top" onerror="this.style.display='none'">
+            <div id="profileFallback" class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+              <div class="mb-5 flex h-32 w-32 items-center justify-center rounded-full border-4 border-white/80 bg-white/60 shadow-lg"><span class="font-serif text-5xl italic text-brand-rust">DS</span></div>
+              <p class="font-serif text-3xl text-brand-darkBrown">Devita Izhal Shafira</p>
+              <p class="mt-2 text-[10px] font-semibold uppercase tracking-[.2em] text-brand-espresso/70">Curious mind · Creative learner</p>
+              <p class="mt-5 max-w-xs text-xs leading-6 text-brand-espresso/75"></p>
+            </div>
+            
+          </div>
+          <div class="absolute bottom-3 right-0 z-30 w-28 rotate-3 border-2 border-dashed border-brand-espresso/40 bg-brand-paper p-2 shadow-lg sm:right-5">
+            <div class="border border-brand-espresso/30 p-2 text-center">
+              <p class="text-[8px] tracking-[.2em]">INDONESIA</p>
+              <p class="my-1 font-serif text-2xl font-bold">DS</p>
+              <p class="text-[8px] tracking-widest">EST. 2024</p>
+            </div>
+          </div>
+          <div class="absolute bottom-10 left-3 z-20 font-hand text-3xl text-brand-rust sm:left-8">keep exploring!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="overflow-hidden border-y border-brand-espresso/15 bg-[#EFE6DC] py-3" aria-hidden="true">
+      <div class="animate-marquee gap-8 font-serif text-sm italic tracking-wider text-brand-espresso/85">
+        <span>DATA · TECHNOLOGY · CREATIVITY ✧</span><span>LEARN BY BUILDING ✧</span>
+        <span>DATA · TECHNOLOGY · CREATIVITY ✧</span><span>LEARN BY BUILDING ✧</span>
+        <span>DATA · TECHNOLOGY · CREATIVITY ✧</span><span>LEARN BY BUILDING ✧</span>
+        <span>DATA · TECHNOLOGY · CREATIVITY ✧</span><span>LEARN BY BUILDING ✧</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="bg-grain py-20 lg:py-28">
+      <div class="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-12 lg:px-12">
+        <div class="lg:col-span-4">
+          <p class="mb-3 text-[10px] font-bold uppercase tracking-[.25em] text-brand-rust">01 / A LITTLE INTRODUCTION</p>
+          <h2 class="font-serif text-4xl italic text-brand-darkBrown sm:text-5xl">About Me</h2>
+          <div class="mt-5 h-px w-16 bg-brand-espresso/30"></div>
+          <p class="mt-6 font-serif text-2xl italic leading-snug text-brand-espresso">“Always curious, always learning, always building.”</p>
+        </div>
+        <div class="space-y-5 text-sm font-light leading-8 text-brand-espresso/85 lg:col-span-8">
+          <p>Hello! I'm <strong class="font-semibold">Devita Izhal Shafira</strong>, a fifth-semester Information Systems student at Universitas Bina Sarana Informatika, PSDKU Tasikmalaya.</p>
+          <p>I have a strong interest in <strong class="font-semibold">Data Analytics and Web Development</strong>. Through coursework, personal projects, and practical experiences, I have explored data processing, SQL, Python, relational databases, and web application development.</p>
+          <p>My project experience includes analyzing e-commerce datasets, developing a web-based order management application, building a simple Python cashier application, and experimenting with computer vision. I have also participated in student organizations and educational volunteer activities.</p>
+          <p>I enjoy learning through hands-on practice, collaborating with others, and turning ideas into practical digital solutions. I am continuously improving my technical and professional skills while exploring opportunities in the technology field.</p>
+          <div class="grid grid-cols-2 gap-4 pt-4 sm:grid-cols-3">
+            <div class="border-l-2 border-brand-softBlue pl-4"><p class="font-serif text-3xl text-brand-rust">05</p><p class="text-[10px] uppercase tracking-wider">Current Semester</p></div>
+            <div class="border-l-2 border-brand-softBlue pl-4"><p class="font-serif text-3xl text-brand-rust">06+</p><p class="text-[10px] uppercase tracking-wider">Project Highlights</p></div>
+            <div class="border-l-2 border-brand-softBlue pl-4"><p class="font-serif text-3xl text-brand-rust">2024</p><p class="text-[10px] uppercase tracking-wider">University Since</p></div>
+          </div>
+          <p class="text-[10px] italic text-brand-taupe">Project count reflects the selected works currently displayed in this portfolio.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="bg-brand-espresso py-20 text-brand-cream lg:py-24">
+      <div class="mx-auto max-w-6xl px-6 lg:px-12">
+        <div class="mb-12 text-center">
+          <p class="mb-3 text-[10px] font-bold uppercase tracking-[.25em] text-brand-softBlue">02 / LEARNING JOURNEY</p>
+          <h2 class="font-serif text-4xl italic text-white sm:text-5xl">Education</h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2">
+          <article class="rounded-xl border border-white/15 bg-white/5 p-7">
+            <p class="mb-3 text-[10px] font-semibold uppercase tracking-[.2em] text-brand-softBlue">2024 — Present</p>
+            <h3 class="font-serif text-3xl text-white">Universitas Bina Sarana Informatika</h3>
+            <p class="mt-2 text-xs uppercase tracking-wider text-brand-cream/70">Information Systems</p>
+            <p class="mt-4 text-sm leading-7 text-brand-cream/80">PSDKU Kota Tasikmalaya</p>
+            <div class="mt-6 inline-flex rounded-full bg-brand-softBlue/20 px-4 py-2 text-xs font-semibold text-brand-softBlue">Reported GPA: 4.00</div>
+          </article>
+          <article class="rounded-xl border border-white/15 bg-white/5 p-7">
+            <p class="mb-3 text-[10px] font-semibold uppercase tracking-[.2em] text-brand-softBlue">2022 — 2024</p>
+            <h3 class="font-serif text-3xl text-white">SMAN 1 Cihaurbeuti</h3>
+            <p class="mt-2 text-xs uppercase tracking-wider text-brand-cream/70">Senior High School</p>
+            <p class="mt-4 text-sm leading-7 text-brand-cream/80">General secondary education.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="bg-stripe-blue py-20 lg:py-24">
+      <div class="mx-auto max-w-6xl px-6 lg:px-12">
+        <div class="mb-14 text-center">
+          <p class="mb-3 text-[10px] font-bold uppercase tracking-[.25em] text-brand-rust">03 / MY TOOLKIT</p>
+          <h2 class="font-serif text-4xl italic text-brand-darkBrown sm:text-5xl">Skills & Technologies</h2>
+          <p class="mx-auto mt-4 max-w-xl text-xs leading-6 text-brand-espresso/75">A collection of tools and concepts I have learned or practiced through coursework and personal projects.</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <article class="rounded-xl border border-brand-espresso/10 bg-brand-paper p-6 shadow-sm">
+            <div class="mb-4 text-2xl">⌘</div><h3 class="font-serif text-2xl">Programming</h3>
+            <div class="mt-4 flex flex-wrap gap-2 text-[10px]"><span class="skill-chip">Python</span><span class="skill-chip">JavaScript</span><span class="skill-chip">PHP</span></div>
+          </article>
+          <article class="rounded-xl border border-brand-espresso/10 bg-brand-paper p-6 shadow-sm">
+            <div class="mb-4 text-2xl">▤</div><h3 class="font-serif text-2xl">Data & Database</h3>
+            <div class="mt-4 flex flex-wrap gap-2 text-[10px]"><span class="skill-chip">SQL</span><span class="skill-chip">MySQL</span><span class="skill-chip">PostgreSQL</span><span class="skill-chip">MariaDB</span><span class="skill-chip">Pandas</span></div>
+          </article>
+          <article class="rounded-xl border border-brand-espresso/10 bg-brand-paper p-6 shadow-sm">
+            <div class="mb-4 text-2xl">⌘</div><h3 class="font-serif text-2xl">Web Development</h3>
+            <div class="mt-4 flex flex-wrap gap-2 text-[10px]"><span class="skill-chip">HTML</span><span class="skill-chip">CSS</span><span class="skill-chip">Node.js</span></div>
+          </article>
+          <article class="rounded-xl border border-brand-espresso/10 bg-brand-paper p-6 shadow-sm">
+            <div class="mb-4 text-2xl">✳</div><h3 class="font-serif text-2xl">Tools</h3>
+            <div class="mt-4 flex flex-wrap gap-2 text-[10px]"><span class="skill-chip">VS Code</span><span class="skill-chip">DBeaver</span><span class="skill-chip">pgAdmin</span><span class="skill-chip">Excel</span><span class="skill-chip">GitHub</span><span class="skill-chip">Vercel</span></div>
+          </article>
+        </div>
+        <div class="mt-8 rounded-xl border border-brand-espresso/10 bg-brand-paper/90 p-6">
+          <h3 class="font-serif text-2xl">Professional Strengths</h3>
+          <div class="mt-4 flex flex-wrap gap-2 text-[10px]">
+            <span class="skill-chip">Self-Learning</span><span class="skill-chip">Problem Solving</span><span class="skill-chip">Adaptability</span><span class="skill-chip">Analytical Thinking</span><span class="skill-chip">Attention to Detail</span><span class="skill-chip">Team Collaboration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & CERTIFICATION -->
+    <section id="experience" class="bg-brand-cream bg-grain py-20 lg:py-24">
+      <div class="mx-auto max-w-6xl px-6 lg:px-12">
+        <div class="mb-12 text-center">
+          <p class="mb-3 text-[10px] font-bold uppercase tracking-[.25em] text-brand-rust">04 / WHERE I HAVE GROWN</p>
+          <h2 class="font-serif text-4xl italic text-brand-darkBrown sm:text-5xl">Experience & Certification</h2>
+        </div>
+        <div class="grid gap-8 lg:grid-cols-12">
+          <article class="rounded-xl border border-brand-espresso/10 bg-brand-softBeige p-7 lg:col-span-7">
+            <p class="text-[10px] font-bold uppercase tracking-[.2em] text-brand-rust">INTERNSHIP / PRACTICAL WORK</p>
+            <h3 class="mt-3 font-serif text-3xl text-brand-darkBrown">CV Zafran ( AA KADU NYENTANG )</h3>
+            <p class="mt-1 text-xs text-brand-taupe">Praktik Kerja Lapangan · 3 months</p>
+            <div class="mt-5 overflow-hidden rounded-lg border border-brand-espresso/10 bg-white/60">
+              <div class="relative h-44 bg-gradient-to-br from-brand-skyBlue to-brand-softBeige"><img src="assets/magang-bsf-tech.jpg" alt="Internship documentation" class="absolute inset-0 z-10 h-full w-full object-cover" onerror="this.style.display='none'"><div id="internshipFallback" class="absolute inset-0 flex items-center justify-center text-center text-xs text-brand-espresso/60">Internship documentation photo</div></div>
+              
+            </div>
+            <h4 class="mt-6 text-xs font-bold uppercase tracking-wider">Web Application Development — AA Kadu</h4>
+            <p class="mt-3 text-sm leading-7 text-brand-espresso/80">Contributed to the development of AA Kadu Rekap Order, a web application designed to support order recording and transaction management.</p>
+            <ul class="mt-4 list-disc space-y-2 pl-5 text-xs leading-6 text-brand-espresso/80">
+              <li>Assisted with frontend and backend application development.</li>
+              <li>Worked on product and order management features.</li>
+              <li>Participated in feature testing, evaluation, and improvements.</li>
+              <li>Used AI as a development assistant through an iterative vibe-coding workflow.</li>
+            </ul>
+          </article>
+          <article class="rounded-xl border border-brand-softBlue bg-brand-powderBlue p-7 lg:col-span-5">
+            <p class="text-[10px] font-bold uppercase tracking-[.2em] text-brand-rust">CERTIFICATION</p>
+            <div class="mt-6 overflow-hidden rounded-lg border border-brand-espresso/10 bg-white/70">
+              <div class="relative h-36 bg-white"><img src="assets/sertifikat-data-analyst.jpg" alt="Data Analyst certificate" class="absolute inset-0 z-10 h-full w-full object-contain" onerror="this.style.display='none'"><div id="certificateFallback" class="absolute inset-0 flex items-center justify-center text-xs text-brand-espresso/50">Certificate preview</div></div>
+              
+            </div>
+            <h3 class="mt-5 font-serif text-3xl text-brand-darkBrown">Data Analyst</h3>
+            <p class="mt-2 text-sm font-semibold text-brand-espresso">DABI Camp · Celerates</p>
+            <p class="mt-4 text-xs leading-6 text-brand-espresso/75">Data analytics training and certification program covering data processing, analysis, and visualization fundamentals.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORGANIZATION & VOLUNTEERING -->
+    <section id="organization" class="bg-brand-cream bg-grain py-20 lg:py-24">
+      <div class="mx-auto max-w-6xl px-6 lg:px-12">
+        <div class="mb-12 text-center">
+          <p class="mb-3 text-[10px] font-bold uppercase tracking-[.25em] text-brand-rust">05 / COMMUNITY & INVOLVEMENT</p>
+          <h2 class="font-serif text-4xl italic text-brand-darkBrown sm:text-5xl">Organization & Volunteering</h2>
+          <p class="mx-auto mt-4 max-w-xl text-xs leading-6 text-brand-espresso/70">Experiences in student organizations and community activities.</p>
+        </div>
+        <div class="grid gap-7 md:grid-cols-3">
+          <article class="overflow-hidden rounded-xl border border-brand-espresso/10 bg-brand-softBeige shadow-sm">
+            <div class="relative h-48 bg-gradient-to-br from-brand-softBlue to-brand-tan"><img src="assets/himasi.jpg" alt="HIMASI activity" class="absolute inset-0 z-10 h-full w-full object-cover" onerror="this.style.display='none'"><div class="absolute inset-0 flex items-center justify-center text-xs text-brand-espresso/60">HIMASI activity photo</div></div>
+            
+            <div class="p-6"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-brand-rust">STUDENT ORGANIZATION</p><h3 class="mt-2 font-serif text-2xl text-brand-darkBrown">HIMASI</h3><p class="mt-1 text-xs font-semibold text-brand-espresso/70">Member · 2025–2026</p><p class="mt-3 text-xs leading-6 text-brand-espresso/75">Berpartisipasi sebagai anggota Himpunan Mahasiswa Sistem Informasi dalam lingkungan organisasi mahasiswa program studi.</p></div>
+          </article>
+          <article class="overflow-hidden rounded-xl border border-brand-espresso/10 bg-brand-powderBlue shadow-sm">
+            <div class="relative h-48 bg-gradient-to-br from-brand-skyBlue to-brand-tan"><img src="assets/pager-asik.jpeg" alt="Pager Asik volunteer activity" class="absolute inset-0 z-10 h-full w-full object-cover" onerror="this.style.display='none'"><div class="absolute inset-0 flex items-center justify-center text-xs text-brand-espresso/60">Pager Asik activity photo</div></div>
+            
+            <div class="p-6"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-brand-rust">COMMUNITY VOLUNTEERING</p><h3 class="mt-2 font-serif text-2xl text-brand-darkBrown">Pager Asik</h3><p class="mt-1 text-xs font-semibold text-brand-espresso/70">Community Volunteer · 2025–2026</p><p class="mt-3 text-xs leading-6 text-brand-espresso/75">Terlibat sebagai volunteer dalam kegiatan komunitas serta mendukung pelaksanaan kegiatan bersama anggota dan relawan lainnya.</p></div>
+          </article>
+          <article class="overflow-hidden rounded-xl border border-brand-espresso/10 bg-brand-softBeige shadow-sm">
+            <div class="relative h-48 bg-gradient-to-br from-brand-tan to-brand-skyBlue"><img src="assets/bsi-explore.jpeg" alt="BSI Explore educational activity" class="absolute inset-0 z-10 h-full w-full object-cover" onerror="this.style.display='none'"><div class="absolute inset-0 flex items-center justify-center text-xs text-brand-espresso/60">BSI Explore activity photo</div></div>
+            
+            <div class="p-6"><p class="text-[9px] font-bold uppercase tracking-[.2em] text-brand-rust">EDUCATIONAL VOLUNTEERING</p><h3 class="mt-2 font-serif text-2xl text-brand-darkBrown">BSI Explore 2026</h3><p class="mt-1 text-xs font-semibold text-brand-espresso/70">Volunteer · 5–27 August 2026</p><p class="mt-3 text-xs leading-6 text-brand-espresso/75">Terlibat dalam kegiatan edukasi dan kunjungan ke sekolah dasar sebagai bagian dari program BSI Explore 2026.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="bg-brand-espresso py-20 text-brand-cream lg:py-28">
+      <div class="mx-auto max-w-6xl px-6 lg:px-12">
+        <div class="mb-14 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div>
+            <p class="mb-3 text-[10px] font-bold uppercase tracking-[.25em] text-brand-softBlue">06 / SELECTED WORK</p>
+            <h2 class="font-serif text-4xl italic text-white sm:text-5xl">Projects & Portfolio</h2>
+          </div>
+          <p class="max-w-sm text-xs leading-6 text-brand-cream/70">A selection of academic and personal projects that reflect my learning journey across data, software, and technology.</p>
+        </div>
+
+        <div class="grid gap-7 md:grid-cols-2">
+          <article class="project-card overflow-hidden rounded-xl border border-white/15 bg-white/5">
+            <div class="project-art relative flex h-48 items-center justify-center bg-gradient-to-br from-[#c9ddeb] via-[#e9e3d8] to-[#b8cbd7] p-6 text-center">
+              <img src="assets/portfolio-brazilian-ecommerce.jpg" alt="Screenshot proyek brazilian-ecommerce" loading="lazy" class="absolute inset-0 z-10 h-full w-full object-cover object-top" onerror="this.style.display='none'">
+              <div class="w-full rounded-lg border border-brand-espresso/15 bg-white/80 p-5 text-brand-darkBrown shadow-lg">
+                <p class="text-[9px] uppercase tracking-[.2em]">E-commerce data project</p><p class="mt-2 font-serif text-3xl">Brazilian E-Commerce</p><p class="mt-1 text-[10px]">Sales Analysis</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] font-bold uppercase tracking-[.2em] text-brand-softBlue">DATA ANALYTICS · 01</p>
+              <h3 class="mt-2 font-serif text-2xl text-white">Brazilian E-Commerce Sales Analysis</h3>
+              <p class="mt-3 text-xs leading-6 text-brand-cream/75">Exploration and analysis of a Brazilian e-commerce dataset to understand transaction patterns, sales performance, and business trends.</p>
+              <p class="mt-4 text-[10px] text-brand-softBlue">Focus: sales trends · transaction exploration · business insights</p>
+            </div>
+          </article>
+
+          <article class="project-card overflow-hidden rounded-xl border border-white/15 bg-white/5">
+            <div class="project-art relative flex h-48 items-center justify-center bg-gradient-to-br from-[#e7d8c8] via-[#f5eee5] to-[#c9ddeb] p-6 text-center">
+              <img src="assets/portfolio-thelook.jpg" alt="Screenshot proyek thelook" loading="lazy" class="absolute inset-0 z-10 h-full w-full object-cover object-top" onerror="this.style.display='none'">
+              <div class="w-full rounded-lg border border-brand-espresso/15 bg-white/80 p-5 text-brand-darkBrown shadow-lg">
+                <p class="text-[9px] uppercase tracking-[.2em]">Customer insights</p><p class="mt-2 font-serif text-3xl">TheLook</p><p class="mt-1 text-[10px]">E-Commerce Analytics</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] font-bold uppercase tracking-[.2em] text-brand-softBlue">DATA ANALYTICS · 02</p>
+              <h3 class="mt-2 font-serif text-2xl text-white">TheLook E-Commerce Analysis</h3>
+              <p class="mt-3 text-xs leading-6 text-brand-cream/75">Analysis of e-commerce sales and consumer behavior through transaction and customer activity data to explore purchasing patterns.</p>
+              <p class="mt-4 text-[10px] text-brand-softBlue">Focus: sales performance · customer behavior · purchasing patterns</p>
+            </div>
+          </article>
+
+          <article class="project-card overflow-hidden rounded-xl border border-white/15 bg-white/5">
+            <div class="project-art relative flex h-48 items-center justify-center bg-gradient-to-br from-[#d6e5ee] via-[#eae1d4] to-[#c6d8c9] p-6 text-center">
+              <img src="assets/portfolio-aa-kadu.jpg" alt="Screenshot proyek aa-kadu" loading="lazy" class="absolute inset-0 z-10 h-full w-full object-cover object-top" onerror="this.style.display='none'">
+              <div class="w-full rounded-lg border border-brand-espresso/15 bg-white/85 p-5 text-brand-darkBrown shadow-lg">
+                <p class="text-[9px] uppercase tracking-[.2em]">Order management system</p><p class="mt-2 font-serif text-3xl">AA Kadu</p><p class="mt-1 text-[10px]">Rekap Order</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] font-bold uppercase tracking-[.2em] text-brand-softBlue">FULL-STACK WEB DEVELOPMENT · 03</p>
+              <h3 class="mt-2 font-serif text-2xl text-white">AA Kadu — Order Management System</h3>
+              <p class="mt-3 text-xs leading-6 text-brand-cream/75">A web application for order recording and management, including user roles, product master data, order status, HPP snapshots, dashboard, and Excel export.</p>
+              <p class="mt-4 text-[10px] text-brand-softBlue">Contribution: feature development, database work, testing, and improvements</p>
+              <p class="mt-3 text-[10px] text-brand-cream/60">HTML · CSS · JavaScript · Node.js · MySQL · JWT · bcryptjs</p>
+            </div>
+          </article>
+
+          <article class="project-card overflow-hidden rounded-xl border border-white/15 bg-white/5">
+            <div class="project-art relative flex h-48 items-center justify-center bg-gradient-to-br from-[#d5e6f3] via-[#d8d0c2] to-[#e9cbbd] p-6 text-center">
+              <img src="assets/portfolio-virtual-camera.jpg" alt="Screenshot proyek virtual-camera" loading="lazy" class="absolute inset-0 z-10 h-full w-full object-cover object-top" onerror="this.style.display='none'">
+              <div class="w-full rounded-lg border border-brand-espresso/15 bg-white/85 p-5 text-brand-darkBrown shadow-lg">
+                <p class="text-[9px] uppercase tracking-[.2em]">Computer vision experiment</p><p class="mt-2 font-serif text-3xl">Virtual Camera</p><p class="mt-1 text-[10px]">Gesture Filters</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] font-bold uppercase tracking-[.2em] text-brand-softBlue">PYTHON · COMPUTER VISION · 04</p>
+              <h3 class="mt-2 font-serif text-2xl text-white">Virtual Camera Meme Filters</h3>
+              <p class="mt-3 text-xs leading-6 text-brand-cream/75">An experimental Python project using webcam hand tracking and gesture events to trigger interactions through an OBS Virtual Camera workflow.</p>
+              <p class="mt-4 text-[10px] text-brand-softBlue">Contribution: modular program structure, hand tracking integration, and gesture event handling</p>
+              <p class="mt-3 text-[10px] text-brand-cream/60">Python · OpenCV · MediaPipe · NumPy · OBS Studio</p>
+              <p class="mt-2 text-[10px] italic text-brand-cream/50">Prototype; not all planned audio/video effects are complete.</p>
+            </div>
+          </article>
+
+          <article class="project-card overflow-hidden rounded-xl border border-white/15 bg-white/5">
+            <div class="project-art relative flex h-48 items-center justify-center bg-gradient-to-br from-[#f1dfc9] via-[#f5eee5] to-[#d6e5ee] p-6 text-center">
+              <img src="assets/portfolio-ayam-geprek.jpg" alt="Screenshot proyek ayam-geprek" loading="lazy" class="absolute inset-0 z-10 h-full w-full object-cover object-top" onerror="this.style.display='none'">
+              <div class="w-full rounded-lg border border-brand-espresso/15 bg-white/85 p-5 text-brand-darkBrown shadow-lg">
+                <p class="text-[9px] uppercase tracking-[.2em]">Programming fundamentals</p><p class="mt-2 font-serif text-3xl">Ayam Geprek</p><p class="mt-1 text-[10px]">Simple Cashier App</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] font-bold uppercase tracking-[.2em] text-brand-softBlue">PYTHON PROGRAMMING · 05</p>
+              <h3 class="mt-2 font-serif text-2xl text-white">Ayam Geprek Raos Pisan</h3>
+              <p class="mt-3 text-xs leading-6 text-brand-cream/75">A simple Python cashier application created to practice transaction input, price calculations, basic programming logic, and receipt output.</p>
+              <p class="mt-4 text-[10px] text-brand-softBlue">Concepts: variables · input/output · arithmetic · program logic</p>
+              <p class="mt-3 text-[10px] text-brand-cream/60">Python</p>
+            </div>
+          </article>
+
+          <article class="project-card overflow-hidden rounded-xl border border-white/15 bg-white/5">
+            <div class="project-art relative flex h-48 items-center justify-center bg-gradient-to-br from-[#d8e5d7] via-[#f4eadb] to-[#d6e5ee] p-6 text-center">
+              <img src="assets/portfolio-inventory.jpg" alt="Screenshot proyek inventory" loading="lazy" class="absolute inset-0 z-10 h-full w-full object-cover object-top" onerror="this.style.display='none'">
+              <div class="w-full rounded-lg border border-brand-espresso/15 bg-white/85 p-5 text-brand-darkBrown shadow-lg">
+                <p class="text-[9px] uppercase tracking-[.2em]">Data management</p><p class="mt-2 font-serif text-3xl">Inventory</p><p class="mt-1 text-[10px]">Excel · ~250 Rows</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] font-bold uppercase tracking-[.2em] text-brand-softBlue">DATA MANAGEMENT · 06</p>
+              <h3 class="mt-2 font-serif text-2xl text-white">Inventory Data Management</h3>
+              <p class="mt-3 text-xs leading-6 text-brand-cream/75">An inventory data organization exercise using Microsoft Excel, involving approximately 250 rows of product and stock information.</p>
+              <p class="mt-4 text-[10px] text-brand-softBlue">Focus: spreadsheet organization · inventory records · data management</p>
+              <p class="mt-3 text-[10px] text-brand-cream/60">Microsoft Excel</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADDITIONAL LEARNING -->
+    <section class="bg-brand-cream bg-grain py-20 lg:py-24">
+      <div class="mx-auto max-w-6xl px-6 lg:px-12">
+        <div class="mb-10 text-center">
+          <p class="mb-3 text-[10px] font-bold uppercase tracking-[.25em] text-brand-rust">07 / CONTINUOUS LEARNING</p>
+          <h2 class="font-serif text-4xl italic text-brand-darkBrown sm:text-5xl">More Things I've Practiced</h2>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-lg border border-brand-espresso/10 bg-brand-softBeige p-5"><h3 class="font-serif text-xl">SQL & Relational Databases</h3><p class="mt-2 text-xs leading-6 text-brand-espresso/75">Practiced SQL queries, JOIN operations, and database exploration using database tools.</p></div>
+          <div class="rounded-lg border border-brand-espresso/10 bg-brand-powderBlue p-5"><h3 class="font-serif text-xl">Data Processing</h3><p class="mt-2 text-xs leading-6 text-brand-espresso/75">Explored data manipulation with Pandas and introductory feature selection concepts.</p></div>
+          <div class="rounded-lg border border-brand-espresso/10 bg-brand-softBeige p-5"><h3 class="font-serif text-xl">Web Fundamentals</h3><p class="mt-2 text-xs leading-6 text-brand-espresso/75">Practiced building web interfaces with HTML, CSS, JavaScript, and PHP.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-stripe-blue py-20 lg:py-24">
+      <div class="mx-auto max-w-5xl px-6 lg:px-12">
+        <div class="rounded-2xl border-8 border-white bg-brand-paper p-7 shadow-2xl sm:p-12">
+          <div class="border border-brand-espresso/15 p-7 text-center sm:p-10">
+            <p class="mb-3 text-[10px] font-bold uppercase tracking-[.25em] text-brand-rust">LET'S CONNECT</p>
+            <h2 class="font-serif text-4xl italic text-brand-darkBrown sm:text-5xl">Have a project in mind?</h2>
+            <p class="mx-auto mt-5 max-w-xl text-xs leading-7 text-brand-espresso/75">I'm always open to learning opportunities, meaningful collaborations, and conversations about data and technology.</p>
+            <a href="mailto:shafiradevi12@gmail.com" class="mt-7 inline-block rounded-full bg-brand-espresso px-8 py-3 text-[10px] font-semibold uppercase tracking-[.18em] text-white transition hover:bg-black">Send Me an Email</a>
+            <div class="mt-9 flex flex-wrap justify-center gap-3">
+              <a href="https://github.com/Shafira0605" target="_blank" rel="noopener noreferrer" class="rounded-full border border-brand-espresso/30 px-5 py-2.5 text-[10px] font-semibold uppercase tracking-wider hover:bg-brand-espresso hover:text-white">GitHub ↗</a>
+              <a href="https://www.linkedin.com/in/devitaizhal" target="_blank" rel="noopener noreferrer" class="rounded-full border border-brand-espresso/30 px-5 py-2.5 text-[10px] font-semibold uppercase tracking-wider hover:bg-brand-espresso hover:text-white">LinkedIn ↗</a>
+              <a href="mailto:shafiradevi12@gmail.com" class="rounded-full border border-brand-espresso/30 px-5 py-2.5 text-[10px] font-semibold uppercase tracking-wider hover:bg-brand-espresso hover:text-white">Email ↗</a>
+            </div>
+            <p class="mt-8 text-xs text-brand-espresso/70">shafiradevi12@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-brand-espresso/15 bg-brand-softBeige py-10 text-brand-darkBrown">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-center sm:flex-row sm:text-left lg:px-12">
+      <div>
+        <p class="font-serif text-2xl italic">Devita Izhal Shafira</p>
+        <p class="mt-1 text-[10px] text-brand-espresso/65">Information Systems Student · Personal Portfolio</p>
+      </div>
+      <p class="text-[10px] text-brand-espresso/60">© <span id="year"></span> Devita Izhal Shafira. All rights reserved.</p>
+      <a href="#home" class="text-[10px] font-semibold uppercase tracking-widest hover:text-brand-rust">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Small utility styling for skill tags.
+    document.querySelectorAll('.skill-chip').forEach((chip) => {
+      chip.className = 'rounded-full border border-brand-espresso/15 bg-white/80 px-3 py-2 text-[10px] font-medium text-brand-espresso';
+    });
+  </script>
+</body>
+</html>

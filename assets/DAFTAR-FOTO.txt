@@ -1,0 +1,16 @@
+Taruh foto di folder ini dengan nama persis seperti di bawah (JPG, lebar ~1200px, 150-400KB):
+
+HOME          final.jpeg                       (sudah terpasang)
+EXPERIENCE    magang-bsf-tech.jpg
+              sertifikat-data-analyst.jpg
+ORGANIZATION  himasi.jpg
+              pager-asik.jpg
+              bsi-explore.jpg
+PORTFOLIO     portfolio-brazilian-ecommerce.jpg
+              portfolio-thelook.jpg
+              portfolio-aa-kadu.jpg
+              portfolio-virtual-camera.jpg
+              portfolio-ayam-geprek.jpg
+              portfolio-inventory.jpg
+
+Foto yang belum ada otomatis memakai tampilan placeholder/ilustrasi.
